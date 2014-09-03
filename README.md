@@ -22,9 +22,9 @@ Optional
  * Warenkorb per (reg)
  * Reisen kommentieren (reg) wenn Reise absolviert
 
- Gems
- ----
+Gems
+----
  
- devise, cancancan(Rechteverwaltung), ransack (Suche), acts-as-taggable-on (Kategorien?), paperclip  || carrierwave
+devise, cancancan(Rechteverwaltung), ransack (Suche), acts-as-taggable-on (Kategorien?), paperclip  || carrierwave
 
- ruby-toolbox.com
+ruby-toolbox.com
