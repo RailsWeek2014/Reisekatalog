@@ -1,8 +1,8 @@
 Reisekatalog
 ============
 
- Pflicht
- -------
+Pflicht
+-------
 
  * public / registrierter / admin Bereich
    * Multi-Userverwaltung
@@ -15,8 +15,8 @@ Reisekatalog
  * Reisen buchen (reg) bei (pub) umleitung zur Registrierung
  * Reisen bewerten (reg) wenn Reise absolviert
    
- Optional
- --------
+Optional
+--------
  
  * Points für gebuchte Reisen für Rabatte (per reg)
  * Warenkorb per (reg)
