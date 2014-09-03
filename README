@@ -1,0 +1,20 @@
+Reisekatalog
+
+ - public / registrierter / admin Bereich
+   - Userverwaltung
+
+ - Verfügbaren Reisen durchsuchen (pub/reg)
+   -Nach verschiedenen Kriterien
+ - Liste der verfügbaren Reisen / Kategorien
+   - 2-3 Ansichten (optional)
+
+ - Reisen buchen (reg) bei (pub) umleitung zur Registrierung
+ - Reisen bewerten (reg) wenn Reise absolviert
+   
+ - Points für gebuchte Reisen für Rabatte (per reg) (optional)
+ - Warenkorb per (reg (optional))
+ - Reisen kommentieren (reg) wenn Reise absolviert (optional)
+
+ Gems: devise, cancancan(Rechteverwaltung), ransack (Suche), acts-as-taggable-on (Kategorien?)
+
+ ruby-toolbox.com
