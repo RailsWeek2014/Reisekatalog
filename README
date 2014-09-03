@@ -5,7 +5,7 @@ Reisekatalog
 
  - Verfügbaren Reisen durchsuchen (pub/reg)
    -Nach verschiedenen Kriterien
- - Liste der verfügbaren Reisen / Kategorien
+ - Liste der verfügbaren Reisen / Kategorien (mit Bildern)
    - 2-3 Ansichten (optional)
 
  - Reisen buchen (reg) bei (pub) umleitung zur Registrierung
@@ -15,6 +15,6 @@ Reisekatalog
  - Warenkorb per (reg (optional))
  - Reisen kommentieren (reg) wenn Reise absolviert (optional)
 
- Gems: devise, cancancan(Rechteverwaltung), ransack (Suche), acts-as-taggable-on (Kategorien?)
+ Gems: devise, cancancan(Rechteverwaltung), ransack (Suche), acts-as-taggable-on (Kategorien?), paperclip  || carrierwave
 
  ruby-toolbox.com
