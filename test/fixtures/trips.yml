@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  land: MyString
+  region: MyString
+  hotel: MyString
+  infos: MyText
+  preis: 1
+
+two:
+  land: MyString
+  region: MyString
+  hotel: MyString
+  infos: MyText
+  preis: 1

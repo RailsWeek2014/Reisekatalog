@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Land:</strong>
+  <%= @trip.land %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @trip.region %>
+</p>
+
+<p>
+  <strong>Hotel:</strong>
+  <%= @trip.hotel %>
+</p>
+
+<p>
+  <strong>Infos:</strong>
+  <%= @trip.infos %>
+</p>
+
+<p>
+  <strong>Preis:</strong>
+  <%= number_to_currency @trip.preis %>
+</p>
+
+<p>
+  <strong>Rating:</strong>
+  <%= @rating %>
+</p>
+
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %>
