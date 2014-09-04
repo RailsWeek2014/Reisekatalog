@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font: 100% Verdana, Arial, Helvetica, sans-serif;
+}
+
+* {
+  margin:0;
+  padding:0;
+}
+
+#site {
+  width: 800px;
+  margin: 0 auto;
+}
+
+#top {
+  background-color:lightblue;
+}
+
+#content {
+  background-color: lightgreen;
+  margin-left: 200px;
+}
+
+#left_menu {
+  float: left;
+  width:200px;
+  background-color: yellow;
+}
+
+#foot {
+  clear: both;
+  background-color:lightblue;
+}

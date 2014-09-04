@@ -1,14 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Reisekatalog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Reisekatalog</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+	<div id="site">
+		<div id="top">Top Menu</div>
+
+
+		<div id="left_menu">
+			<br>
+			<%= link_to 'home' , root_path %>
+			<br>
+			
+			
+			<% if user_signed_in? %>
+			
+				<%= link_to 'profile' , edit_user_registration_path %>
+				<br>
+				<%= link_to 'logout' , destroy_user_session_path, method: :delete %>
+			
+			<% else %>
+
+				<%= link_to 'register' , new_user_registration_path %>
+				<br>
+				<%= link_to 'login' , new_user_session_path %>
+
+			<% end %>
+			
+		</div>
+
+
+		<div id="content">
+
+			<% if flash[:alert] %>
+			<p id="alert">
+				<%= flash[:alert] %>
+			</p>
+			<% end %>
+
+			<% if flash[:notice] %>
+			<p id="notice">
+				<%= flash[:notice] %>
+			</p>
+			<% end %>
+
+			<%= yield %>
+
+			
+		</div>
+
+		<div id="foot">Copyright by</div>
+
+	</div>
 
 </body>
 </html>
