@@ -1,0 +1,12 @@
+<%= form_for @rating do |r| %>
+<div class="field">
+	<%= r.hidden_field :id %>
+	<%= r.select :rating, %w(1 2 3 4 5) %>
+</div>
+
+
+<div class="actions">
+	<%= r.submit %>
+</div>
+<% end %>	
+

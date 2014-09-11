@@ -9,17 +9,17 @@
 <body>
 
 	<div id="site">
-		<div id="top">Top Menu
+		<div id="top"> ACP
 		</div>
 
 
 		<div id="left_menu">
 			<br>
-			<%= link_to 'home' , root_path %>
+			<%= link_to 'acp' , acp_path %>
 			<br>
 			
 			
-			<% if user_signed_in? %>
+	
 			
 			<%= link_to 'profile' , edit_user_registration_path %>
 			<br>
@@ -27,17 +27,14 @@
 
 			<br>
 			<br>
-			<%= link_to 'trips' , trips_path %>
+			<%= link_to 'users' , acp_users_path %>
 			<br>
-			<br>
-			<%= current_user.id %>
-			<% else %>
+			<%= link_to 'trips' , acp_trips_path %>
 
-			<%= link_to 'register' , new_user_registration_path %>
 			<br>
-			<%= link_to 'login' , new_user_session_path %>
+			<br>
 
-			<% end %>
+			<%= current_user.email %>
 			
 
 		</div>

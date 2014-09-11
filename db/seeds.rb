@@ -6,9 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-t1 = Trip.create land: "Germany" , region: "hessen" , hotel: "Bla" , preis: 123.45
+t1 = Trip.new land: "Germany" , region: "hessen" , hotel: "Bla" , preis: 123.45
+t1.tag_list = "Germany, hessen, Bla"
+t1.save
 
 pw = "qwertzuiop"
+admin_pw = "qaywsxedc"
+a1 = User.create email: "admin@asd.de" , password: admin_pw , password_confirmation: admin_pw , admin:true
 
 u1 = User.create email: "a1@asd.de" , password: pw , password_confirmation: pw
 u2 = User.create email: "b1@asd.de" , password: pw , password_confirmation: pw

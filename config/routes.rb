@@ -1,10 +1,29 @@
 Rails.application.routes.draw do
 
+  resources :ratings
+
+  get 'acp/index', as: 'acp'
+  get 'acp/trips', as: 'acp_trips'
+  get 'acp/users' , as: 'acp_users'
+  get 'acp/edit_user', as: 'user'
+  patch 'acp/edit_user' => 'acp#update_user'
+
+
+  get 'trips/categorie' => 'trips#tagged_index' , as: 'tag_index'
+  get 'trips/categorie/:id' => 'trips#tagged', as: 'tagged'
+
   resources :trips
 
   devise_for :users
 
-  root to: "trips#index"
+
+  root to: 'trips#tagged_index'
+
+ # get 'trips/:id' => 'trips#show', as: 'rating'
+
+  # nochmal abändern
+  patch 'trips/:id' => 'trips#show'
+  
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
