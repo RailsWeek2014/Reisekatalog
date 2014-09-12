@@ -42,6 +42,11 @@ class TripsController < ApplicationController
     end
   end
 
+  def my_trips
+    @trips = Trip.where(id:Rating.includes(:trip).where(user_id:current_user.id).map(&:trip_id))
+    authorize! :my_trips , @trips
+  end
+
   # GET /trips/new
   def new
     @trip = Trip.new

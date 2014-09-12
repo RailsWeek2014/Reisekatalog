@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get 'trips/categorie' => 'trips#tagged_index' , as: 'tag_index'
   get 'trips/categorie/:id' => 'trips#tagged', as: 'tagged'
+  get 'trips/my_trips/' => 'trips#my_trips' , as: 'my_trips'
 
   resources :trips
 

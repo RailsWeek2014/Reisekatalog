@@ -10,6 +10,7 @@ class Ability
          cannot :user_rating, Trip
          cannot :buy, Trip
        elsif user.id?
+        can :my_trips, Trip
         can :buy, Trip
         can :tagged_index, Trip
         can :tagged, Trip
