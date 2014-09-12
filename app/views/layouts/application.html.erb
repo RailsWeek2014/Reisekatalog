@@ -17,7 +17,7 @@
 			<br>
 			<%= link_to 'home' , root_path %>
 			<br>
-			<%= link_to 'acp' , acp_path if current_user.admin? %>
+			<%= link_to 'acp' , acp_path if can? :manage , :all %>
 			<br>
 			<% if user_signed_in? %>
 			
