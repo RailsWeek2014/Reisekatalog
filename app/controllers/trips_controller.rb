@@ -3,13 +3,18 @@ class TripsController < ApplicationController
   before_action :tag_cloud, only: [:tagged, :tagged_index]
   #load_and_authorize_resource
   authorize_resource
+  respond_to :html
 
 
   def tagged_index
   end
 
   def tagged
+    #Post.metasearch({:title_or_tag_taggings_tag_name_contains => params[:search]})
+    #@q = Trip.search({:land_or_region_or_hotel_or_infos_or_tag_taggings_tag_name_cont => params[:q]})
+    #@q = Trip.search({params[:tags] => params[:q]})
 
+    #@trips = @q.result
     @trips = Trip.tagged_with(params[:id])
     #render partial: 'index_list'
 
@@ -19,7 +24,10 @@ class TripsController < ApplicationController
   # GET /trips
   # GET /trips.json
   def index
-    @trips = Trip.all
+
+    @q = Trip.search(params[:q])
+    @trips = @q.result
+
   end
 
   # GET /trips/1

@@ -1,0 +1,16 @@
+<%= search_form_for @q do |f| %>
+<%= f.label "Search Trip with:" %>
+<div class="field">
+	<%= f.search_field :land_or_region_or_hotel_or_infos_cont %>
+</div>
+<div class="field">
+	<%= f.label "Price between:" %>
+	<%= f.search_field :preis_gteq %>
+	<%= f.label "and" %>
+	<%= f.search_field :preis_lteq %>
+</div>
+
+<div class="actions">
+	<%= f.submit %>
+</div>
+<% end %>

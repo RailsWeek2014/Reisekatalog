@@ -33,8 +33,8 @@
 <% if @rating.nil? %>
 
     <% if can? :buy , @trip%>
-    
     <%= link_to 'Buy' , new_rating_path(trip:@trip) , data: { confirm: 'Do you really want to buy?' } %>
+    
     
     <% end %>
     

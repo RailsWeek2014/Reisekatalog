@@ -1,13 +1,13 @@
-<h1>Listing trips</h1>
+<h1>Available trips</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Land</th>
-      <th>Region</th>
-      <th>Hotel</th>
-      <th>Infos</th>
-      <th>Preis</th>
+      <th><%= sort_link(@q, :land) %></th>
+      <th><%= sort_link(@q, :region) %></th>
+      <th><%= sort_link(@q, :hotel) %></th>
+      <th><%= sort_link(@q, :infos) %></th>
+      <th><%= sort_link(@q, :preis) %></th>
       <th>Avarage Rating</th>
       <th colspan="3"></th>
     </tr>

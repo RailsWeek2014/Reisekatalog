@@ -2,6 +2,8 @@
 		<%= u.id %>
 		<%= u.email %>
 		<%= link_to 'edit' , user_path(id: u.id) %>
+		<%= link_to 'delete' , user_path(id: u.id) , method: :delete , data: { confirm: "Are you sure?" } %>
+
 		<br>
 		<% end %>
 				

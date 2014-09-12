@@ -27,10 +27,6 @@
 
 			<br>
 			<br>
-			<%= link_to 'trips' , trips_path %>
-			<br>
-			<br>
-			<%= current_user.id %>
 			<% else %>
 
 			<%= link_to 'register' , new_user_registration_path %>
@@ -38,8 +34,19 @@
 			<%= link_to 'login' , new_user_session_path %>
 
 			<% end %>
+			<br>
+			<br>
+			<%= link_to 'all trips' , trips_path %><br>
+			<%= link_to 'categories' , tag_index_path %>
+			<br>
+			<br>
+			<% if user_signed_in?%>
 			
-
+			<p>Logged in as:
+				<%= current_user.email %>
+			</p>
+			<% end %>
+			
 		</div>
 
 

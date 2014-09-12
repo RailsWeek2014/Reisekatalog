@@ -32,6 +32,16 @@ class AcpController < ApplicationController
 		authorize! :manage, @user
 	end
 
+	def delete_user
+		@user = User.find(params[:id])
+		@user.destroy
+		respond_to do |format|
+				format.html { redirect_to acp_users_path, notice: 'User was successfully deleted.' }
+				format.json { head :no_content }
+		end
+		authorize! :manage, @user
+	end
+	
 	def trips
 		@trips = Trip.all
 
