@@ -43,7 +43,8 @@ class AcpController < ApplicationController
 	end
 	
 	def trips
-		@trips = Trip.all
+		@q = Trip.search(params[:q])
+		@trips = @q.result
 
 		authorize! :manage, @trips
 	end

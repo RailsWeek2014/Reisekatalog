@@ -9,7 +9,7 @@
 <body>
 
 	<div id="site">
-		<div id="top">Top Menu
+		<div id="top"><h2>Reisekatalog</h2>
 		</div>
 
 
@@ -17,8 +17,8 @@
 			<br>
 			<%= link_to 'home' , root_path %>
 			<br>
-			
-			
+			<%= link_to 'acp' , acp_path if current_user.admin? %>
+			<br>
 			<% if user_signed_in? %>
 			
 			<%= link_to 'profile' , edit_user_registration_path %>
